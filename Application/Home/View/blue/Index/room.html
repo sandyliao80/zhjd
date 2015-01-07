@@ -1,9 +1,14 @@
-<extend name="Public:base_hotel"/>
+<extend name="Public:base_room"/>
 <block name="roomlist">
 <volist name="room_arr" id="vo">
-	<a href="__URL__/room_info?place={$pid}&roomid={$key}" data-prefetch="ture">
-	<li>
-        <h2>{$vo.room_name}</h2>
-    </a></li>
+<li class="table-view-cell media">
+    <a href="__URL__/room_info?place={$pid}&roomid={$key}" class="navigate-right">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        {$vo.room_name}
+        <p>{$vo.room_more}</p>
+      </div>
+    </a>
+  </li>
 </volist>
 </block>

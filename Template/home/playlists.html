@@ -1,0 +1,15 @@
+<ion-view view-title="景点列表">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists">
+        <div class="list">
+  		    <a class="item item-thumbnail-left" href="index.php/?pid={{playlist.id}}">
+  		      <img src="cover.jpg">
+  		      <h2>{{playlist.title}}</h2>
+  		      <p>Zhuhai</p>
+  		    </a>
+		    </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

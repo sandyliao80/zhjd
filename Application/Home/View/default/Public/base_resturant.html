@@ -3,25 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<link rel="stylesheet" href="__CSS__/jquery.mobile-1.4.5.min.css">
-<link rel="stylesheet" href="__CSS__/theme.css">
-<link rel="stylesheet" href="__CSS__/base_resturant.css">
+<link rel="stylesheet" href="__CSS__/ratchet.min.css">
 </head>
 <body>
+<header class="bar bar-nav">
+  <button class="btn btn-link btn-nav pull-left">
+    <span class="icon icon-left-nav"></span>
+    后退
+  </button>
+  <button class="btn btn-link btn-nav pull-right">
+    首页
+    <span class="icon icon-home"></span>
+  </button>
 
-<div data-url="demo-page" data-role="page" data-theme="b" id="demo-page" class="my-page">
-    <div data-role="header">
-        <h1>餐厅列表</h1>
-        <a href="./index.html" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a>
-    </div><!-- /header -->
-    <div role="main" class="ui-content">
-        <ul data-role="listview" data-inset="true">
-            <block name="reslist"></block>
-        </ul>
-    </div><!-- /content -->
+<nav class="bar bar-tab">
+  <a class="tab-item active" href="/index.php/Index/info?place={$pid}">
+    <span class="icon icon-info"></span>
+    <span class="tab-label">信息</span>
+  </a>
+  <a class="tab-item" href="/index.php/Index/photos?place={$pid}">
+    <span class="icon icon-pages"></span>
+    <span class="tab-label">相册</span>
+  </a>
+  <a class="tab-item" href="/index.php/Index/rooms?place={$pid}">
+    <span class="icon icon-home"></span>
+    <span class="tab-label">住宿</span>
+  </a>
+  <a class="tab-item" href="/index.php/Index/resturant?place={$pid}">
+    <span class="icon icon-gear"></span>
+    <span class="tab-label">餐饮</span>
+  </a>
+  <a class="tab-item" href="/index.php/Index/news?place={$pid}">
+    <span class="icon icon-more"></span>
+    <span class="tab-label">活动</span>
+  </a>
+</nav>
+
+  <h1 class="title">餐厅列表</h1>
+</header>
+<div class="content">
+<ul class="table-view">
+  <block name="reslist"></block>
+</ul>
 </div>
 <script src="__JS__/jquery-2.1.1.min.js"></script>
-<script src="__JS__/jquery.mobile-1.4.5.min.js"></script>
-<script src="__JS__/base.js"></script>
+<script src="__JS__/ratchet.min.js"></script>
 </body>
 </html>

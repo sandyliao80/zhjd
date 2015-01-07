@@ -25,6 +25,7 @@ class IndexController extends Controller {
         $this->assign('introduction',$info_data['introduction']);
         $this->assign('location',nl2br($info_data['location']));
         $this->assign('more',nl2br($info_data['more']));
+        $this->assign('pid',$Pid);
         $THEME = get_theme($Pid);
         $this->theme($THEME)->display();
     }
@@ -36,6 +37,7 @@ class IndexController extends Controller {
         $this->assign('img_arr',$images['Photos']);
         $this->assign('name',$images['name']);
         $THEME = get_theme($Pid);
+        $this->assign('pid',$Pid);
         $this->theme($THEME)->display();
     }
 
@@ -48,6 +50,7 @@ class IndexController extends Controller {
         $this->assign('room_count',count($room_data));
         $this->assign('pid',$Pid);
         $this->assign('name',$rooms['name']);
+        $this->assign('pid',$Pid);
         $THEME = get_theme($Pid);
         $this->theme($THEME)->display();
     }
@@ -78,6 +81,7 @@ class IndexController extends Controller {
         $this->assign('pid',$Pid);
         $this->assign('res_count',count($res_data));
         $this->assign('name',$resturant['name']);
+        $this->assign('pid',$Pid);
         $THEME = get_theme($Pid);
         $this->theme($THEME)->display();
     }
@@ -113,6 +117,7 @@ class IndexController extends Controller {
         $point = $LOCATION[$Pid];
         $this->assign('point',$point);
         $THEME = get_theme($Pid);
+        $this->assign('pid',$Pid);
         $this->theme($THEME)->display();
     }
 }
